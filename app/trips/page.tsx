@@ -5,7 +5,7 @@ import EmptyState from "../components/EmptyState";
 import TripsClient from "./TripsClient";
 
 const TripsPage = async () => {
-  const currentUser = getCurrentUser();
+  const currentUser = await getCurrentUser();
   if (!currentUser) {
     return <EmptyState title="Unauthorized" subtitle="Please login" />;
   }
